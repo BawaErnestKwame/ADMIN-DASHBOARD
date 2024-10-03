@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
 
@@ -34,6 +36,9 @@
     <section id="interface">
         <div class="navigation">
             <div class="n1">
+                <div>
+                    <i class="fas fa-bars" id="menu_btn"></i>
+                </div>
                 <div class="search">
                     <i class="fa fa-search"></i>
                     <input type="text" placeholder="search">
@@ -331,6 +336,12 @@
 
         </div>
     </section>
+
+    <script>
+        $('#menu_btn').click(function(){
+            $('.menu').toggleClass("active");
+        })
+    </script>
 
 
 

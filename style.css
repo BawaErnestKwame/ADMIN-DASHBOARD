@@ -107,6 +107,18 @@ body{
     z-index: 1;
     padding-left: 330px;
 } 
+#interface .navigation .n1{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#interface .navigation .n1 #menu_btn{
+    font-size: 1.5rem;
+    display: none;
+}
+
+
 
 #interface .navigation .search{
     display: flex;
@@ -281,6 +293,116 @@ tbody tr td{
     font-size: 14px;
     color: #554cd1;
     font-weight: 600;
+}
+
+@media screen and (max-width:969px) {
+    .menu{
+        width:270px;
+        height: 100%;
+        left: -270px;
+        transition: 0.5s ease;
+        background-color: #111827;
+        border-radius: 0;
+    }
+
+    .logo{
+        gap: 1.5rem;
+    }
+
+    .menu .logo h2{
+        color: #e5e7eb;
+        
+
+    }
+
+    .menu.active{
+        left: 0;
+    }
+
+    #interface .navigation .n1 #menu_btn{
+        display: initial;
+    }
+
+
+    #interface {
+        width: 100%;
+        margin-left: 0;
+        display: inline-block;
+        transition: 0.5s ease;
+    }
+
+    .menu.active ~ #interface{
+        width: calc(100% - 270px);
+        margin-left: 270px;
+        transition: 0.5s ease;
+    }
+
+    #interface .navigation{
+        width: 100%;
+        padding-left: 0px;
+
+    }
+
+    .menu.active ~ #interface .navigation {
+        width: 100%;
+        padding-left: 0px;
+        padding-left: 270px;
+    }
+
+    .values{
+        padding: 30px 30px 0 30px;
+        justify-content: flex-start;
+       
+    }
+    .values .val-box{
+        padding: 16px 20px;
+        margin: 10px 20px 10px 0;
+    }
+
+    .board{
+        width: 92%;
+        overflow-x: auto;
+        padding: 0;
+    }
+
+    table{
+        width: 100%;
+        border-collapse: collapse;
+    } 
+}
+
+
+@media screen and (max-width:477px){
+    #interface .navigation{
+        padding: 15px;
+
+    }
+
+    #interface .navigation .search input{
+
+       width: 150px;
+
+    }
+
+    .i-name{
+        padding: 30px 15px 0 15px;
+
+    }
+
+    .values{
+        padding: 15px 15px 0 15px;
+        margin: 8px 0;
+    }
+
+    .values .val-box{
+        width: 100%;
+    }
+
+    .board{
+        margin: 30px 15px 30px 15px;
+    }
+
+    
 }
 
 
